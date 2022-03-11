@@ -77,4 +77,14 @@ public class CustomList extends ArrayAdapter<City> {
         return false;
     }
 
+    /**
+     * removes city from list (or it's supposed to anyway)
+     * @param city
+     *      city to remove from list
+     */
+    public void deleteCity(City city){
+        return;
+    }
+
+
 }
