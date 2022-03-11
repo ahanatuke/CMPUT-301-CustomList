@@ -83,7 +83,17 @@ public class CustomList extends ArrayAdapter<City> {
      *      city to remove from list
      */
     public void deleteCity(City city){
-        return;
+        if (hasCity(city)){
+            for (int i = 0; i < cities.size(); i++){
+                if (cities.get(i).getCityName() == city.getCityName()
+                        && cities.get(i).getProvinceName() == city.getProvinceName()){
+                    cities.remove(i);
+                    break;
+                }
+            }
+        } else{
+            throw new IllegalArgumentException();
+        }
     }
 
 
